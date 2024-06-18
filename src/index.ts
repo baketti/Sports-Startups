@@ -1,11 +1,11 @@
 import { Cittadino } from "./models/Cittadino";
 import { Incentivo } from "./models/Incentivo";
 import { Startup } from "./models/Startup";
-import { citizenData } from "./test-data";
-import { incentiveData } from "./test-data";
-import { startupData } from "./test-data";
+import { citizensData } from "./test-data";
+import { incentivesData } from "./test-data";
+import { startupsData } from "./test-data";
 
-const startups = startupData.map(data => new Startup(
+const startups = startupsData.map(data => new Startup(
     data.name,
     data.focusSector,
     data.description,
@@ -14,13 +14,13 @@ const startups = startupData.map(data => new Startup(
     data.totalEmployees
 ));
   
-const incentives = incentiveData.map(data => new Incentivo(
+const incentives = incentivesData.map(data => new Incentivo(
     data.id,
     data.description,
     data.incentiveValue,
 ));
   
-const citizens = citizenData.map(data => new Cittadino(
+const citizens = citizensData.map(data => new Cittadino(
     data.firstName,
     data.lastName,
     data.age,

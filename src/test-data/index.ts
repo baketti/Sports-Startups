@@ -1,4 +1,4 @@
-export const startupData = [
+export const startupsData = [
     {
       name: "SportTech",
       focusSector: "wearable technologies",
@@ -41,7 +41,7 @@ export const startupData = [
     },  
   ];
   
-  export const incentiveData = [
+  export const incentivesData = [
     {
       id: "INC123",
       description: "Government grant for innovative sport technologies",
@@ -69,7 +69,7 @@ export const startupData = [
     },
   ];
   
-  export const citizenData = [
+  export const citizensData = [
     {
       firstName: "John",
       lastName: "Doe",
