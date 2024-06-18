@@ -1,7 +1,8 @@
-# TS-Project
+# Sports startups
 
 ## Overview
-This project is a simple TypeScript application that defines and implements interfaces and classes for three main models: `Startup`, `Cittadino`, and `Incentivo`. The primary goal of this project is to demonstrate how to create and use TypeScript interfaces and classes effectively.
+### Final exam for Start2Impact university's typescript course
+This project is a simple TypeScript application that defines and implements interfaces and classes for three models: `Startup`, `Cittadino`, and `Incentivo`. The primary goal of this project is to demonstrate how to create and use TypeScript interfaces and classes effectively.
 
 ## Project Structure
 The project consists of the following interfaces and classes:
@@ -16,6 +17,10 @@ To run this project, you need to have Node.js and TypeScript installed on your m
 ```bash
 npm install -g typescript
 ```
+The other one dependency is chalk to color logs.
+```bash
+npm install chalk
+```
 
 ## Scripts
 The project contains the following npm scripts:
@@ -28,4 +33,9 @@ The project contains the following npm scripts:
 - `build`: This script compiles the TypeScript files into JavaScript using the `tsconfig.json` configuration. It compiles `.ts` files into `.js` files in the `dist` folder. The executable file will be `index.js`.
 ```bash
   npm run build
+```
+
+- `start`: This script runs the compiled `index.js` file within  `dist` folder
+```bash
+  npm start
 ```
