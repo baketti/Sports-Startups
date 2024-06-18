@@ -39,3 +39,4 @@ The project contains the following npm scripts:
 ```bash
   npm start
 ```
+And finally you can take a look on classes workflow by watching logs in the console.
