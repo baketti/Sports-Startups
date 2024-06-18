@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { IStartup } from "../Startup";
 
 interface ICittadino{
@@ -22,6 +23,6 @@ export class Cittadino implements ICittadino{
     }
 
     doActivities(startup: IStartup): void {
-        console.log(`${this.name} ${this.surname}, age ${this.age}: interested for participating in activity offered by ${startup.name}`);
+        console.log(`${this.name} ${this.surname}, age ${this.age}: interested for participating in activity offered by ${chalk.yellowBright(startup.name)}`);
     }
 }

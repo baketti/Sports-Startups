@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { IStartup } from "../Startup";
 
 export interface IIncentivo{
@@ -24,10 +25,10 @@ export class Incentivo implements IIncentivo{
   
     assignToStartup(startup: IStartup): void {
       if (this.checkEligibility(startup)) {
-        console.log(`Incentive ${this.idCode} assigned to startup ${startup.name}`);
+        console.log(chalk.green(`Incentive ${chalk.magenta(this.idCode)} assigned to startup ${chalk.yellowBright(startup.name)}`));
         startup.receiveIncentive(this);
       } else {
-        console.log(`Startup ${startup.name} does not meet the eligibility criteria for incentive ${this.idCode}`);
+          console.log(chalk.red(`Startup ${chalk.yellowBright(startup.name)} does not meet the eligibility criteria for incentive ${chalk.magenta(this.idCode)}`));
       }
     }
   

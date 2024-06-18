@@ -1,20 +1,23 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Incentivo = void 0;
+const chalk_1 = __importDefault(require("chalk"));
 class Incentivo {
-    constructor(idCode, description, incentiveValue, eligibilityCriteria) {
+    constructor(idCode, description, incentiveValue) {
         this.idCode = idCode;
         this.description = description;
         this.incentiveValue = incentiveValue;
-        this.eligibilityCriteria = eligibilityCriteria;
     }
     assignToStartup(startup) {
         if (this.checkEligibility(startup)) {
-            console.log(`Incentive ${this.idCode} assigned to startup ${startup.name}`);
+            console.log(chalk_1.default.green(`Incentive ${chalk_1.default.magenta(this.idCode)} assigned to startup ${chalk_1.default.yellowBright(startup.name)}`));
             startup.receiveIncentive(this);
         }
         else {
-            console.log(`Startup ${startup.name} does not meet the eligibility criteria for incentive ${this.idCode}`);
+            console.log(chalk_1.default.red(`Startup ${chalk_1.default.yellowBright(startup.name)} does not meet the eligibility criteria for incentive ${chalk_1.default.magenta(this.idCode)}`));
         }
     }
     checkEligibility(startup) {

@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { IIncentivo } from "../Incentivo";
 
 //ADD a field about finance health
@@ -36,6 +37,7 @@ export class Startup implements IStartup{
     }
   
     receiveIncentive(incentive: IIncentivo): void {
-      console.log(`Incentive received: ${incentive.description}, value: ${incentive.incentiveValue}`);
+      const { description, incentiveValue } = incentive;
+      console.log(`Incentive received from ${chalk.yellowBright(this.name)}: ${chalk.magenta(description)}, value: ${chalk.magenta(incentiveValue)}`);
     }
 }
